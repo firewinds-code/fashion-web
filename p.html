@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pure CSS Responsive Image Slider</title>
+    <style type="text/css">
+      #slider {
+        overflow: hidden;
+      }
+      #slider figure {
+        position: relative;
+        width: 1000%; /* 100% for each picture, 10 pictures = 1000% */
+        margin: 0;
+        left: 0;
+        animation: 40s slider infinite;
+      }
+      #slider figure img {
+        width: 10%; /* 100 / 10 pictures = 10% */
+        height: 700px; /* to set a maximum height  */
+        float: left;
+        /*  next 2 to continue responsive with the maximum height  */
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
+      @keyframes slider {
+        0% {
+          left: 0;
+        } /* you must divide 100% fot the amout of images you have */
+        7% {
+          left: 0%;
+        } /* these intermediate steps (7%, 17%, 27%, ... will make the transition speed faster */
+        10% {
+          left: -100%;
+        } /* because my total width: 1000% (10x 100% for 10 images), I will use 10% for each image */
+        17% {
+          left: -100%;
+        }
+        20% {
+          left: -200%;
+        }
+        27% {
+          left: -200%;
+        }
+        30% {
+          left: -300%;
+        }
+        37% {
+          left: -300%;
+        }
+        40% {
+          left: -400%;
+        }
+        47% {
+          left: -400%;
+        }
+        50% {
+          left: -500%;
+        }
+        57% {
+          left: -500%;
+        }
+        60% {
+          left: -600%;
+        }
+        67% {
+          left: -600%;
+        }
+        70% {
+          left: -700%;
+        }
+        77% {
+          left: -700%;
+        }
+        80% {
+          left: -800%;
+        }
+        87% {
+          left: -800%;
+        }
+        90% {
+          left: -900%;
+        }
+        100% {
+          left: -900%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider">
+      <figure>
+        <img src="download.jpg" />
+        <img src="download (1).jpg" />
+        <img src="download (2).jpg" />
+        <img src="download (3).jpg" />
+        <img src="download (4).jpg" />
+      </figure>
+    </div>
+  </body>
+</html>
